@@ -1,5 +1,5 @@
 //
-//  NSObject_Extension.h
+//  XCHScript.h
 //  XCHooks
 //
 //  Created by Matthew Nespor on 1/4/16.
@@ -8,8 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSObject (Xcode_Plugin_Template_Extension)
+@interface XCHScript : NSObject
 
-+ (void)pluginDidLoad:(NSBundle *)plugin;
+@property (copy, nonatomic) NSString* shellPath;
+@property (copy, nonatomic) NSString* body;
 
 @end
