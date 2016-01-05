@@ -13,6 +13,8 @@
 		1C0544981C3B7C04009F3106 /* XCHooks.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0544971C3B7C04009F3106 /* XCHooks.m */; };
 		1C05449B1C3B7C04009F3106 /* NSObject_Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C05449A1C3B7C04009F3106 /* NSObject_Extension.m */; };
 		1C410D6F1C3B8D88002D4B13 /* XCHScript.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C410D6E1C3B8D88002D4B13 /* XCHScript.m */; };
+		1C410D731C3BE8AD002D4B13 /* XCHConfigurationWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C410D711C3BE8AD002D4B13 /* XCHConfigurationWindowController.m */; };
+		1C410D741C3BE8AD002D4B13 /* XCHConfigurationWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C410D721C3BE8AD002D4B13 /* XCHConfigurationWindowController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,9 @@
 		1C05449C1C3B7C04009F3106 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C410D6D1C3B8D88002D4B13 /* XCHScript.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCHScript.h; sourceTree = "<group>"; };
 		1C410D6E1C3B8D88002D4B13 /* XCHScript.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCHScript.m; sourceTree = "<group>"; };
+		1C410D701C3BE8AD002D4B13 /* XCHConfigurationWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCHConfigurationWindowController.h; sourceTree = "<group>"; };
+		1C410D711C3BE8AD002D4B13 /* XCHConfigurationWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCHConfigurationWindowController.m; sourceTree = "<group>"; };
+		1C410D721C3BE8AD002D4B13 /* XCHConfigurationWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XCHConfigurationWindowController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +84,9 @@
 				1C0544931C3B7C04009F3106 /* Supporting Files */,
 				1C410D6D1C3B8D88002D4B13 /* XCHScript.h */,
 				1C410D6E1C3B8D88002D4B13 /* XCHScript.m */,
+				1C410D701C3BE8AD002D4B13 /* XCHConfigurationWindowController.h */,
+				1C410D711C3BE8AD002D4B13 /* XCHConfigurationWindowController.m */,
+				1C410D721C3BE8AD002D4B13 /* XCHConfigurationWindowController.xib */,
 			);
 			path = XCHooks;
 			sourceTree = "<group>";
@@ -147,6 +155,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C410D741C3BE8AD002D4B13 /* XCHConfigurationWindowController.xib in Resources */,
 				1C0544951C3B7C04009F3106 /* XCHooks.xcscheme in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -158,6 +167,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C410D731C3BE8AD002D4B13 /* XCHConfigurationWindowController.m in Sources */,
 				1C0544981C3B7C04009F3106 /* XCHooks.m in Sources */,
 				1C05449B1C3B7C04009F3106 /* NSObject_Extension.m in Sources */,
 				1C410D6F1C3B8D88002D4B13 /* XCHScript.m in Sources */,

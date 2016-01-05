@@ -8,13 +8,15 @@
 
 #import "XCHooks.h"
 #import "XCHScript.h"
+#import "XCHConfigurationWindowController.h"
 
 const NSString* kXCHEnvironmentVariableNameFilePath = @"FILE_PATH";
 
 @interface XCHooks()
 
-@property (nonatomic, strong, readwrite) NSBundle *bundle;
-@property (nonatomic, strong) NSOperationQueue* taskQueue;
+@property (strong, nonatomic, readwrite) NSBundle *bundle;
+@property (strong, nonatomic) NSOperationQueue* taskQueue;
+@property (strong, nonatomic) XCHConfigurationWindowController* configurationWindowController;
 
 @end
 
@@ -55,18 +57,29 @@ const NSString* kXCHEnvironmentVariableNameFilePath = @"FILE_PATH";
     
     // Create menu items, initialize UI, etc.
     // Sample Menu Item:
-    NSMenuItem *menuItem = [[NSApp mainMenu] itemWithTitle:@"Edit"];
+    NSMenuItem *menuItem = [[NSApp mainMenu] itemWithTitle:@"Window"];
     if (menuItem) {
-        [[menuItem submenu] addItem:[NSMenuItem separatorItem]];
-        NSMenuItem *actionMenuItem = [[NSMenuItem alloc] initWithTitle:@"Do Action" action:@selector(doMenuAction) keyEquivalent:@""];
-        //[actionMenuItem setKeyEquivalentModifierMask:NSAlphaShiftKeyMask | NSControlKeyMask];
-        [actionMenuItem setTarget:self];
-        [[menuItem submenu] addItem:actionMenuItem];
+        NSMenuItem *presentConfigWindowItem = [[NSMenuItem alloc] initWithTitle:@"Hooks" action:@selector(presentConfigWindow) keyEquivalent:@""];
+        [presentConfigWindowItem setTarget:self];
+        NSInteger idx = [menuItem.submenu indexOfItemWithTitle:@"Bring All to Front"] - 1;
+        if (idx < 0) {
+            [menuItem.submenu addItem:[NSMenuItem separatorItem]];
+            [menuItem.submenu addItem:presentConfigWindowItem];
+        }
+        else {
+            [menuItem.submenu insertItem:presentConfigWindowItem
+                                 atIndex:idx];
+        }
     }
 }
 
-- (void)doMenuAction
+- (void)presentConfigWindow
 {
+    if (self.configurationWindowController == nil) {
+        self.configurationWindowController = [[XCHConfigurationWindowController alloc] initWithWindowNibName:NSStringFromClass([XCHConfigurationWindowController class])];
+    }
+
+    [self.configurationWindowController.window makeKeyAndOrderFront:self];
 }
 
 - (void)documentDidSave:(NSNotification*)note {
