@@ -1,0 +1,290 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1C05448F1C3B7C04009F3106 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C05448E1C3B7C04009F3106 /* AppKit.framework */; };
+		1C0544911C3B7C04009F3106 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C0544901C3B7C04009F3106 /* Foundation.framework */; };
+		1C0544951C3B7C04009F3106 /* XCHooks.xcscheme in Resources */ = {isa = PBXBuildFile; fileRef = 1C0544941C3B7C04009F3106 /* XCHooks.xcscheme */; };
+		1C0544981C3B7C04009F3106 /* XCHooks.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0544971C3B7C04009F3106 /* XCHooks.m */; };
+		1C05449B1C3B7C04009F3106 /* NSObject_Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C05449A1C3B7C04009F3106 /* NSObject_Extension.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1C05448B1C3B7C04009F3106 /* XCHooks.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XCHooks.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C05448E1C3B7C04009F3106 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		1C0544901C3B7C04009F3106 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		1C0544941C3B7C04009F3106 /* XCHooks.xcscheme */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = XCHooks.xcscheme; path = XCHooks.xcodeproj/xcshareddata/xcschemes/XCHooks.xcscheme; sourceTree = SOURCE_ROOT; };
+		1C0544961C3B7C04009F3106 /* XCHooks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCHooks.h; sourceTree = "<group>"; };
+		1C0544971C3B7C04009F3106 /* XCHooks.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCHooks.m; sourceTree = "<group>"; };
+		1C0544991C3B7C04009F3106 /* NSObject_Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSObject_Extension.h; sourceTree = "<group>"; };
+		1C05449A1C3B7C04009F3106 /* NSObject_Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSObject_Extension.m; sourceTree = "<group>"; };
+		1C05449C1C3B7C04009F3106 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1C0544891C3B7C04009F3106 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C05448F1C3B7C04009F3106 /* AppKit.framework in Frameworks */,
+				1C0544911C3B7C04009F3106 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1C0544821C3B7C04009F3106 = {
+			isa = PBXGroup;
+			children = (
+				1C0544921C3B7C04009F3106 /* XCHooks */,
+				1C05448D1C3B7C04009F3106 /* Frameworks */,
+				1C05448C1C3B7C04009F3106 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1C05448C1C3B7C04009F3106 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1C05448B1C3B7C04009F3106 /* XCHooks.xcplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1C05448D1C3B7C04009F3106 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1C05448E1C3B7C04009F3106 /* AppKit.framework */,
+				1C0544901C3B7C04009F3106 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1C0544921C3B7C04009F3106 /* XCHooks */ = {
+			isa = PBXGroup;
+			children = (
+				1C0544961C3B7C04009F3106 /* XCHooks.h */,
+				1C0544971C3B7C04009F3106 /* XCHooks.m */,
+				1C0544991C3B7C04009F3106 /* NSObject_Extension.h */,
+				1C05449A1C3B7C04009F3106 /* NSObject_Extension.m */,
+				1C05449C1C3B7C04009F3106 /* Info.plist */,
+				1C0544931C3B7C04009F3106 /* Supporting Files */,
+			);
+			path = XCHooks;
+			sourceTree = "<group>";
+		};
+		1C0544931C3B7C04009F3106 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1C0544941C3B7C04009F3106 /* XCHooks.xcscheme */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1C05448A1C3B7C04009F3106 /* XCHooks */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1C05449F1C3B7C04009F3106 /* Build configuration list for PBXNativeTarget "XCHooks" */;
+			buildPhases = (
+				1C0544871C3B7C04009F3106 /* Sources */,
+				1C0544881C3B7C04009F3106 /* Resources */,
+				1C0544891C3B7C04009F3106 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XCHooks;
+			productName = XCHooks;
+			productReference = 1C05448B1C3B7C04009F3106 /* XCHooks.xcplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1C0544831C3B7C04009F3106 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Matthew Nespor";
+				TargetAttributes = {
+					1C05448A1C3B7C04009F3106 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = 1C0544861C3B7C04009F3106 /* Build configuration list for PBXProject "XCHooks" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1C0544821C3B7C04009F3106;
+			productRefGroup = 1C05448C1C3B7C04009F3106 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1C05448A1C3B7C04009F3106 /* XCHooks */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1C0544881C3B7C04009F3106 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C0544951C3B7C04009F3106 /* XCHooks.xcscheme in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1C0544871C3B7C04009F3106 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C0544981C3B7C04009F3106 /* XCHooks.m in Sources */,
+				1C05449B1C3B7C04009F3106 /* NSObject_Extension.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1C05449D1C3B7C04009F3106 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+			};
+			name = Debug;
+		};
+		1C05449E1C3B7C04009F3106 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+			};
+			name = Release;
+		};
+		1C0544A01C3B7C04009F3106 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(HOME)";
+				INFOPLIST_FILE = XCHooks/Info.plist;
+				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mnespor.XCHooks;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xcplugin;
+			};
+			name = Debug;
+		};
+		1C0544A11C3B7C04009F3106 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(HOME)";
+				INFOPLIST_FILE = XCHooks/Info.plist;
+				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mnespor.XCHooks;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xcplugin;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1C0544861C3B7C04009F3106 /* Build configuration list for PBXProject "XCHooks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1C05449D1C3B7C04009F3106 /* Debug */,
+				1C05449E1C3B7C04009F3106 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1C05449F1C3B7C04009F3106 /* Build configuration list for PBXNativeTarget "XCHooks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1C0544A01C3B7C04009F3106 /* Debug */,
+				1C0544A11C3B7C04009F3106 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1C0544831C3B7C04009F3106 /* Project object */;
+}
