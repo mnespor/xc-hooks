@@ -7,6 +7,10 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="XCHConfigurationWindowController">
             <connections>
+                <outlet property="hookNamePopUpButton" destination="w9p-wm-SgI" id="x8y-4g-a2o"/>
+                <outlet property="hookSwitch" destination="LTg-rv-Nwi" id="BoA-3k-M6J"/>
+                <outlet property="scriptField" destination="hFK-q1-gEw" id="JXx-Qs-DWG"/>
+                <outlet property="shellPopUpButton" destination="CnV-Rf-CXz" id="uLc-nD-WFk"/>
                 <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -24,22 +28,27 @@
                     <popUpButton verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w9p-wm-SgI">
                         <rect key="frame" x="18" y="226" width="445" height="26"/>
                         <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="EEe-Xl-AFl"/>
                             <constraint firstAttribute="height" constant="21" id="ftL-F5-WJc"/>
                         </constraints>
-                        <popUpButtonCell key="cell" type="push" title="When I save a document" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="A6Y-Hg-Rd2" id="RzK-nD-Cqd">
+                        <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="RzK-nD-Cqd">
                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="menu"/>
                             <menu key="menu" id="oGI-53-NlA">
                                 <items>
-                                    <menuItem title="When I save a document" state="on" id="A6Y-Hg-Rd2"/>
+                                    <menuItem title="After I save a document" id="A6Y-Hg-Rd2"/>
                                 </items>
                             </menu>
                         </popUpButtonCell>
+                        <connections>
+                            <action selector="hookNameSelectionDidChange:" target="-2" id="j8u-xR-CCW"/>
+                        </connections>
                     </popUpButton>
                     <popUpButton verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CnV-Rf-CXz">
                         <rect key="frame" x="46" y="195" width="307" height="26"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="c7X-da-giI"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="f5w-LS-I7k"/>
                         </constraints>
                         <popUpButtonCell key="cell" type="push" title="/bin/bash" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="A8y-RH-D7V" id="ZCu-3C-Pll">
                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
@@ -50,10 +59,15 @@
                                 </items>
                             </menu>
                         </popUpButtonCell>
+                        <connections>
+                            <action selector="shellSelectionDidChange:" target="-2" id="ocf-38-WRt"/>
+                        </connections>
                     </popUpButton>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x6u-uO-4aI">
                         <rect key="frame" x="18" y="201" width="24" height="17"/>
                         <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="17" id="8Ru-zi-MIG"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="20" id="D2C-6G-Sd5"/>
                             <constraint firstAttribute="width" constant="20" id="Mrx-1w-6Ye"/>
                             <constraint firstAttribute="height" constant="17" id="gZc-lE-Yys"/>
                         </constraints>
@@ -70,19 +84,30 @@
                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
+                        <connections>
+                            <action selector="scriptTextDidChange:" target="-2" id="p1c-nL-S2U"/>
+                        </connections>
                     </textField>
-                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LTg-rv-Nwi">
+                    <button ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LTg-rv-Nwi">
                         <rect key="frame" x="356" y="199" width="106" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="102" id="K9I-ag-6K7"/>
+                            <constraint firstAttribute="height" constant="14" id="Lr6-X9-i1P"/>
+                        </constraints>
                         <buttonCell key="cell" type="check" title="Hook Enabled" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="43U-Dm-wlF">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
+                        <connections>
+                            <action selector="hookDidToggle:" target="-2" id="SQM-8B-DDK"/>
+                        </connections>
                     </button>
                 </subviews>
             </view>
             <connections>
                 <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
             </connections>
+            <point key="canvasLocation" x="139" y="279"/>
         </window>
     </objects>
 </document>

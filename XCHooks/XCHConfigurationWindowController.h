@@ -8,6 +8,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface XCHConfigurationWindowController : NSWindowController
+@interface XCHConfigurationWindowController : NSWindowController <NSTextDelegate>
 
 @end

@@ -9,6 +9,7 @@
 #import "XCHooks.h"
 #import "XCHScript.h"
 #import "XCHConfigurationWindowController.h"
+#import "XCHUserDefaultsKeys.h"
 
 const NSString* kXCHEnvironmentVariableNameFilePath = @"FILE_PATH";
 
@@ -83,7 +84,10 @@ const NSString* kXCHEnvironmentVariableNameFilePath = @"FILE_PATH";
 }
 
 - (void)documentDidSave:(NSNotification*)note {
-    NSLog(@"%@", note.object);
+    if (![[NSUserDefaults standardUserDefaults] boolForKey:kXCHUserDefaultsKeyHookEnabled]) {
+        return;
+    }
+
     if ([note.object isKindOfClass:[NSDocument class]]) {
         NSMutableDictionary* environment = [NSMutableDictionary dictionary];
         NSDocument* document = (NSDocument*)note.object;
@@ -96,7 +100,8 @@ const NSString* kXCHEnvironmentVariableNameFilePath = @"FILE_PATH";
         // TODO: XCHTasks have a launch path and a body.
         XCHScript* s = [[XCHScript alloc] init];
         s.shellPath = @"/bin/bash";
-        s.body = @"echo 'hello $FILE_PATH'";
+        s.body = [[NSUserDefaults standardUserDefaults] stringForKey:kXCHUserDefaultsKeyScript];
+        s.body = s.body == nil ? @"" : s.body;
         NSArray* scripts = @[s];
 
         [scripts enumerateObjectsUsingBlock:^(XCHScript*  _Nonnull script, NSUInteger idx, BOOL * _Nonnull stop) {
